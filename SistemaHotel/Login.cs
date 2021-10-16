@@ -32,49 +32,88 @@ namespace SistemaHotel
 
         }
 
-        //Botão Login
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            
+            ChamarLogin();
+        }
+
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ChamarLogin();
+            }
+        }
+
+
+        private void ChamarLogin()
+        {
+            if (txtUsuario.Text.ToString().Trim() == "")
+            {
+                MessageBox.Show("Preencha o Usuário", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtUsuario.Text = "";
+                txtUsuario.Focus();
+                return;
+            }
+
+            if (txtSenha.Text.ToString().Trim() == "")
+            {
+                MessageBox.Show("Preencha a Senha", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtSenha.Text = "";
+                txtSenha.Focus();
+                return;
+            }
+            //AQUI VAI O CÓDIGO PARA O LOGIN
             Conexao.Open(); //Abrir a conexão
             String query = "SELECT * FROM hotel.usuarios where usuario = '" + txtUsuario.Text + "' AND senha = '" + txtSenha.Text + "'";
             SqlDataAdapter dp = new SqlDataAdapter(query, Conexao);
             DataTable dt = new DataTable();
             dp.Fill(dt);
 
-            if(dt.Rows.Count == 1)
+            if (dt.Rows.Count == 1)
             {
-                FrmMenu frmMenu = new FrmMenu();
-                this.Hide();
-                frmMenu.Show();
-                Conexao.Close(); //Fechar a Conexão
-            }
 
+
+                {
+
+
+                    MessageBox.Show("Bem Vindo! " + Program.nomeUsuario, "Login Efetuado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmMenu form = new FrmMenu();
+                    //this.Hide();
+                    Limpar();
+                    form.Show();
+                }
+            }
             else
             {
-                MessageBox.Show("Erro ao Logar!", "Dados Incorretos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUsuario.Text = ""; //Limpa o campo Usuário
-                txtSenha.Text = ""; //Limpa o campo Senha
-                txtUsuario.Select(); // Cursor irá para o campo Usuário
+                MessageBox.Show("Erro ao Logar!", "Dados Incorretos", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                txtUsuario.Text = "";
+                txtUsuario.Focus();
+                txtSenha.Text = "";
             }
+
+            Conexao.Close();
         }
-        //Para centralizar o btnLogin
-        private void TxtSenha_TextChanged(object sender, EventArgs e)
+
+
+        private void Limpar()
         {
-
+            txtUsuario.Text = "";
+            txtSenha.Text = "";
+            txtUsuario.Focus();
         }
 
-       
         private void FrmLogin_Resize(object sender, EventArgs e)
         {
             pnlLogin.Location = new Point(this.Width / 2 - 166, this.Height / 2 - 170);
         }
 
-        private void pnlLogin_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
 
     }
+
+
+
+
 }
+

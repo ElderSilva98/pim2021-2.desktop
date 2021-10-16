@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Windows.Forms;
+
 namespace SistemaHotel
 {
     partial class FrmLogin
@@ -118,6 +121,11 @@ namespace SistemaHotel
             this.pnlLogin.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void pnlLogin_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
 
         #endregion
