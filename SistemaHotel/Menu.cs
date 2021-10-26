@@ -48,12 +48,6 @@ namespace SistemaHotel
             form.Show();
         }
 
-        private void CargoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cadastros.FrmCargo form = new Cadastros.FrmCargo();
-            form.Show();
-        }
-
         private void HóspedesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Cadastros.FrmHospedes form = new Cadastros.FrmHospedes();
@@ -105,12 +99,6 @@ namespace SistemaHotel
         private void ServiçosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Cadastros.FrmServicos form = new Cadastros.FrmServicos();
-            form.Show();
-        }
-
-        private void FuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cadastros.FrmFuncionarios form = new Cadastros.FrmFuncionarios();
             form.Show();
         }
 

@@ -36,12 +36,10 @@ namespace SistemaHotel
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MenuCadastro = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hóspedesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quartosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serviçosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuProdutos = new System.Windows.Forms.ToolStripMenuItem();
             this.novoProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -162,25 +160,15 @@ namespace SistemaHotel
             // MenuCadastro
             // 
             this.MenuCadastro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.funcionáriosToolStripMenuItem,
             this.hóspedesToolStripMenuItem,
             this.quartosToolStripMenuItem,
             this.usuáriosToolStripMenuItem,
             this.serviçosToolStripMenuItem,
-            this.cargoToolStripMenuItem,
             this.fornecedoresToolStripMenuItem});
             this.MenuCadastro.Image = ((System.Drawing.Image)(resources.GetObject("MenuCadastro.Image")));
             this.MenuCadastro.Name = "MenuCadastro";
             this.MenuCadastro.Size = new System.Drawing.Size(87, 20);
             this.MenuCadastro.Text = "Cadastros";
-            // 
-            // funcionáriosToolStripMenuItem
-            // 
-            this.funcionáriosToolStripMenuItem.Enabled = false;
-            this.funcionáriosToolStripMenuItem.Name = "funcionáriosToolStripMenuItem";
-            this.funcionáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.funcionáriosToolStripMenuItem.Text = "Funcionários";
-            this.funcionáriosToolStripMenuItem.Click += new System.EventHandler(this.funcionáriosToolStripMenuItem_Click);
             // 
             // hóspedesToolStripMenuItem
             // 
@@ -199,7 +187,6 @@ namespace SistemaHotel
             // 
             // usuáriosToolStripMenuItem
             // 
-            this.usuáriosToolStripMenuItem.Enabled = false;
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
             this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
@@ -212,14 +199,6 @@ namespace SistemaHotel
             this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.serviçosToolStripMenuItem.Text = "Serviços";
             this.serviçosToolStripMenuItem.Click += new System.EventHandler(this.serviçosToolStripMenuItem_Click);
-            // 
-            // cargoToolStripMenuItem
-            // 
-            this.cargoToolStripMenuItem.Enabled = false;
-            this.cargoToolStripMenuItem.Name = "cargoToolStripMenuItem";
-            this.cargoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cargoToolStripMenuItem.Text = "Cargo";
-            this.cargoToolStripMenuItem.Click += new System.EventHandler(this.cargoToolStripMenuItem_Click);
             // 
             // fornecedoresToolStripMenuItem
             // 
@@ -430,7 +409,7 @@ namespace SistemaHotel
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -1138,7 +1117,8 @@ namespace SistemaHotel
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Cadastros.FrmUsuarios form = new Cadastros.FrmUsuarios();
+            form.Show();
         }
 
         private void quartosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -1147,11 +1127,6 @@ namespace SistemaHotel
         }
 
         private void hóspedesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void funcionáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
         }
@@ -1202,12 +1177,6 @@ namespace SistemaHotel
             form.Show();
         }
 
-        private void cargoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cadastros.FrmCargo form = new Cadastros.FrmCargo();
-            form.Show();
-        }
-
         private void serviçosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
@@ -1231,12 +1200,10 @@ namespace SistemaHotel
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem MenuCadastro;
-        private System.Windows.Forms.ToolStripMenuItem funcionáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hóspedesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quartosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuáriosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviçosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cargoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fornecedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuProdutos;
         private System.Windows.Forms.ToolStripMenuItem novoProdutoToolStripMenuItem;

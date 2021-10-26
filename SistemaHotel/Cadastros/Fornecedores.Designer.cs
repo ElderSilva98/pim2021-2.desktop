@@ -212,6 +212,7 @@ namespace SistemaHotel.Cadastros
             this.Name = "FrmFornecedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fornecedores";
+            this.Load += new System.EventHandler(this.FrmFornecedores_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

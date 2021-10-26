@@ -7,6 +7,7 @@ namespace SistemaHotel.Cadastros
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        
 
         /// <summary>
         /// Clean up any resources being used.
@@ -45,13 +46,14 @@ namespace SistemaHotel.Cadastros
             this.label2 = new System.Windows.Forms.Label();
             this.txtBuscarNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSenha
             // 
             this.txtSenha.Enabled = false;
-            this.txtSenha.Location = new System.Drawing.Point(298, 113);
+            this.txtSenha.Location = new System.Drawing.Point(298, 57);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(112, 20);
             this.txtSenha.TabIndex = 105;
@@ -59,7 +61,7 @@ namespace SistemaHotel.Cadastros
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(243, 116);
+            this.label4.Location = new System.Drawing.Point(242, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 106;
@@ -68,7 +70,7 @@ namespace SistemaHotel.Cadastros
             // txtUsuario
             // 
             this.txtUsuario.Enabled = false;
-            this.txtUsuario.Location = new System.Drawing.Point(91, 110);
+            this.txtUsuario.Location = new System.Drawing.Point(91, 57);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(115, 20);
             this.txtUsuario.TabIndex = 103;
@@ -76,7 +78,7 @@ namespace SistemaHotel.Cadastros
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 113);
+            this.label3.Location = new System.Drawing.Point(36, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 104;
@@ -95,6 +97,7 @@ namespace SistemaHotel.Cadastros
             this.btnExcluir.Size = new System.Drawing.Size(70, 65);
             this.btnExcluir.TabIndex = 102;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -109,6 +112,7 @@ namespace SistemaHotel.Cadastros
             this.btnEditar.Size = new System.Drawing.Size(70, 65);
             this.btnEditar.TabIndex = 101;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnSalvar
             // 
@@ -123,6 +127,7 @@ namespace SistemaHotel.Cadastros
             this.btnSalvar.Size = new System.Drawing.Size(70, 65);
             this.btnSalvar.TabIndex = 100;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -136,6 +141,7 @@ namespace SistemaHotel.Cadastros
             this.btnNovo.Size = new System.Drawing.Size(70, 65);
             this.btnNovo.TabIndex = 99;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // grid
             // 
@@ -150,20 +156,26 @@ namespace SistemaHotel.Cadastros
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grid.Size = new System.Drawing.Size(549, 186);
             this.grid.TabIndex = 98;
+            this.grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellContentClick);
             // 
             // cbCargo
             // 
             this.cbCargo.Enabled = false;
             this.cbCargo.FormattingEnabled = true;
-            this.cbCargo.Location = new System.Drawing.Point(298, 70);
+            this.cbCargo.Items.AddRange(new object[] {
+            "Recepção",
+            "Administração",
+            "Gerencia"});
+            this.cbCargo.Location = new System.Drawing.Point(298, 11);
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(112, 21);
             this.cbCargo.TabIndex = 94;
+            this.cbCargo.SelectedIndexChanged += new System.EventHandler(this.cbCargo_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(242, 74);
+            this.label6.Location = new System.Drawing.Point(242, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 97;
@@ -172,7 +184,7 @@ namespace SistemaHotel.Cadastros
             // txtNome
             // 
             this.txtNome.Enabled = false;
-            this.txtNome.Location = new System.Drawing.Point(91, 71);
+            this.txtNome.Location = new System.Drawing.Point(91, 12);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(115, 20);
             this.txtNome.TabIndex = 93;
@@ -180,7 +192,7 @@ namespace SistemaHotel.Cadastros
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 74);
+            this.label2.Location = new System.Drawing.Point(36, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 96;
@@ -188,19 +200,30 @@ namespace SistemaHotel.Cadastros
             // 
             // txtBuscarNome
             // 
-            this.txtBuscarNome.Location = new System.Drawing.Point(473, 22);
+            this.txtBuscarNome.Location = new System.Drawing.Point(91, 135);
             this.txtBuscarNome.Name = "txtBuscarNome";
-            this.txtBuscarNome.Size = new System.Drawing.Size(115, 20);
+            this.txtBuscarNome.Size = new System.Drawing.Size(222, 20);
             this.txtBuscarNome.TabIndex = 95;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(417, 25);
+            this.label1.Location = new System.Drawing.Point(42, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 92;
             this.label1.Text = "Buscar:";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.BtnBuscar.Location = new System.Drawing.Point(320, 133);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.BtnBuscar.TabIndex = 107;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // FrmUsuarios
             // 
@@ -208,6 +231,7 @@ namespace SistemaHotel.Cadastros
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(625, 450);
+            this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtUsuario);
@@ -227,6 +251,7 @@ namespace SistemaHotel.Cadastros
             this.Name = "FrmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Usuários";
+            this.Load += new System.EventHandler(this.FrmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -250,5 +275,6 @@ namespace SistemaHotel.Cadastros
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBuscarNome;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnBuscar;
     }
 }
