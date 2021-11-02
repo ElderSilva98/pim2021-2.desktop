@@ -17,7 +17,6 @@ namespace SistemaHotel.Cadastros
         SqlConnection Conexao = new SqlConnection(@"Data Source=" + FrmLogin.SERVERNAME + ";Initial Catalog=hotel;Persist Security Info=True;User ID=sa;Password=789456");
         private string strSQL;
 
-
         private void habilitarCampos()
         {
             txtNome.Enabled = true;
@@ -42,6 +41,7 @@ namespace SistemaHotel.Cadastros
             cbCargo.SelectedIndex = 0;
             txtSenha.Text = "";
         }
+
 
         public FrmUsuarios()
         {
@@ -133,6 +133,7 @@ namespace SistemaHotel.Cadastros
 
                     Conexao.Open();
                     da.Fill(ds);
+
                     grid.DataSource = ds.Tables[0];
 
                 }
@@ -150,7 +151,7 @@ namespace SistemaHotel.Cadastros
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -168,7 +169,57 @@ namespace SistemaHotel.Cadastros
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            txtIdUsuario.Enabled = true;
+            txtIdUsuario.Visible = true;
+            lbIdUsuario.Visible = true;
+            btnSalvarEdicao.Enabled = true;
+            btnSalvarEdicao.Visible = true;
 
+            habilitarCampos();
+        }
+
+        private void btnSalvarEdicao_Click(object sender, EventArgs e)
+        {
+            if (txtIdUsuario == null)
+            {
+                MessageBox.Show("Insira o ID do usuário que deseja editar.");
+            }
+            else
+            {
+                try
+                {
+                    strSQL = "UPDATE hotel.usuarios SET nome = @NOME, cargo = @CARGO, usuario = @USUARIO, senha = @SENHA WHERE id = @ID";
+                    SqlCommand comando = new SqlCommand(strSQL, Conexao);
+                    DateTime data = DateTime.Now;
+
+                    comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                    comando.Parameters.AddWithValue("@CARGO", cbCargo.SelectedItem);
+                    comando.Parameters.AddWithValue("@USUARIO", txtUsuario.Text);
+                    comando.Parameters.AddWithValue("@SENHA", txtSenha.Text);
+                    comando.Parameters.AddWithValue("@ID", txtIdUsuario.Text);
+                    comando.Parameters.AddWithValue("@DATA", data);
+
+                    Conexao.Open();
+                    comando.ExecuteNonQuery();
+                    limparCampos();
+                    desabilitarCampos();
+                    txtIdUsuario.Enabled = false;
+                    txtIdUsuario.Visible = false;
+                    lbIdUsuario.Visible = false;
+                    btnSalvarEdicao.Enabled = false;
+                    btnSalvarEdicao.Visible = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    Conexao.Close();
+                    strSQL = null;
+
+                }
+            }
         }
     }
 }

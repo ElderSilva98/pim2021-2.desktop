@@ -12,6 +12,7 @@ namespace SistemaHotel
 {
     public partial class FrmMenu : Form
     {
+
         public FrmMenu()
         {
             InitializeComponent();
@@ -92,8 +93,8 @@ namespace SistemaHotel
 
         private void UsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cadastros.FrmUsuarios form = new Cadastros.FrmUsuarios();
-            form.Show();
+            Cadastros.FrmUsuarios usuarios = new Cadastros.FrmUsuarios();
+            usuarios.Show();
         }
 
         private void ServiçosToolStripMenuItem_Click(object sender, EventArgs e)

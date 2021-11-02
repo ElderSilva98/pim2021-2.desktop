@@ -47,6 +47,9 @@ namespace SistemaHotel.Cadastros
             this.txtBuscarNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnBuscar = new System.Windows.Forms.Button();
+            this.txtIdUsuario = new System.Windows.Forms.TextBox();
+            this.lbIdUsuario = new System.Windows.Forms.Label();
+            this.btnSalvarEdicao = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,7 +105,6 @@ namespace SistemaHotel.Cadastros
             // btnEditar
             // 
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.Enabled = false;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -225,12 +227,46 @@ namespace SistemaHotel.Cadastros
             this.BtnBuscar.UseVisualStyleBackColor = false;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
+            // txtIdUsuario
+            // 
+            this.txtIdUsuario.Enabled = false;
+            this.txtIdUsuario.Location = new System.Drawing.Point(525, 12);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.Size = new System.Drawing.Size(71, 20);
+            this.txtIdUsuario.TabIndex = 108;
+            this.txtIdUsuario.Visible = false;
+            // 
+            // lbIdUsuario
+            // 
+            this.lbIdUsuario.AutoSize = true;
+            this.lbIdUsuario.Location = new System.Drawing.Point(443, 14);
+            this.lbIdUsuario.Name = "lbIdUsuario";
+            this.lbIdUsuario.Size = new System.Drawing.Size(76, 13);
+            this.lbIdUsuario.TabIndex = 109;
+            this.lbIdUsuario.Text = "ID do usuário: ";
+            this.lbIdUsuario.Visible = false;
+            // 
+            // btnSalvarEdicao
+            // 
+            this.btnSalvarEdicao.Enabled = false;
+            this.btnSalvarEdicao.Location = new System.Drawing.Point(446, 57);
+            this.btnSalvarEdicao.Name = "btnSalvarEdicao";
+            this.btnSalvarEdicao.Size = new System.Drawing.Size(150, 23);
+            this.btnSalvarEdicao.TabIndex = 110;
+            this.btnSalvarEdicao.Text = "Salvar alterações";
+            this.btnSalvarEdicao.UseVisualStyleBackColor = true;
+            this.btnSalvarEdicao.Visible = false;
+            this.btnSalvarEdicao.Click += new System.EventHandler(this.btnSalvarEdicao_Click);
+            // 
             // FrmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(625, 450);
+            this.Controls.Add(this.btnSalvarEdicao);
+            this.Controls.Add(this.lbIdUsuario);
+            this.Controls.Add(this.txtIdUsuario);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label4);
@@ -276,5 +312,8 @@ namespace SistemaHotel.Cadastros
         private System.Windows.Forms.TextBox txtBuscarNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.TextBox txtIdUsuario;
+        private System.Windows.Forms.Label lbIdUsuario;
+        private System.Windows.Forms.Button btnSalvarEdicao;
     }
 }
