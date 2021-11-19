@@ -104,7 +104,7 @@ namespace SistemaHotel.Cadastros
             {
                 try
                 {
-                    strSQL = "SELECT * FROM hotel.usuarios where nome = " + "'"+txtBuscarNome.Text+"'";
+                    strSQL = "SELECT id,nome,cargo,usuario,data FROM hotel.usuarios where nome = " + "'"+txtBuscarNome.Text+"'";
                     DataSet ds = new DataSet();
                     SqlDataAdapter da = new SqlDataAdapter(strSQL, Conexao);
 
@@ -156,14 +156,7 @@ namespace SistemaHotel.Cadastros
 
         private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (grid.SelectedRows != null)
-            {
-                btnEditar.Enabled = true;
-            }
-            else
-            {
-                btnEditar.Enabled = false;
-            }
+            
 
         }
 
@@ -180,7 +173,7 @@ namespace SistemaHotel.Cadastros
 
         private void btnSalvarEdicao_Click(object sender, EventArgs e)
         {
-            if (txtIdUsuario == null)
+            if (txtIdUsuario.Text == "")
             {
                 MessageBox.Show("Insira o ID do usuário que deseja editar.");
             }

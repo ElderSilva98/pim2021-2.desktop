@@ -142,5 +142,11 @@ namespace SistemaHotel
         {
 
         }
+
+        private void novaReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reservas.FrmReservas form = new Reservas.FrmReservas();
+            form.Show();
+        }
     }
 }

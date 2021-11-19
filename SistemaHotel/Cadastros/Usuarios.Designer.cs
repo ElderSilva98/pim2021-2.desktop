@@ -58,6 +58,7 @@ namespace SistemaHotel.Cadastros
             this.txtSenha.Enabled = false;
             this.txtSenha.Location = new System.Drawing.Point(298, 57);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(112, 20);
             this.txtSenha.TabIndex = 105;
             // 
@@ -172,6 +173,7 @@ namespace SistemaHotel.Cadastros
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(112, 21);
             this.cbCargo.TabIndex = 94;
+            this.cbCargo.Text = "( nenhum ) ";
             this.cbCargo.SelectedIndexChanged += new System.EventHandler(this.cbCargo_SelectedIndexChanged);
             // 
             // label6

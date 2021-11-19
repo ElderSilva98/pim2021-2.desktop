@@ -39,6 +39,8 @@ namespace SistemaHotel.Cadastros
             this.label4 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +85,7 @@ namespace SistemaHotel.Cadastros
             this.btnSalvar.Size = new System.Drawing.Size(70, 65);
             this.btnSalvar.TabIndex = 99;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -96,16 +99,17 @@ namespace SistemaHotel.Cadastros
             this.btnNovo.Size = new System.Drawing.Size(70, 65);
             this.btnNovo.TabIndex = 98;
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // grid
             // 
             this.grid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid.GridColor = System.Drawing.SystemColors.Control;
-            this.grid.Location = new System.Drawing.Point(34, 74);
+            this.grid.Location = new System.Drawing.Point(34, 110);
             this.grid.Name = "grid";
             this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(360, 296);
+            this.grid.Size = new System.Drawing.Size(360, 260);
             this.grid.TabIndex = 97;
             // 
             // txtValor
@@ -142,12 +146,31 @@ namespace SistemaHotel.Cadastros
             this.label2.TabIndex = 95;
             this.label2.Text = "Nome:";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(298, 75);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(96, 23);
+            this.btnBuscar.TabIndex = 102;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(34, 77);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(258, 20);
+            this.txtBuscar.TabIndex = 103;
+            // 
             // FrmServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(511, 399);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalvar);
@@ -159,6 +182,7 @@ namespace SistemaHotel.Cadastros
             this.Controls.Add(this.label2);
             this.Name = "FrmServicos";
             this.Text = "Servicos";
+            this.Load += new System.EventHandler(this.FrmServicos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,5 +200,7 @@ namespace SistemaHotel.Cadastros
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }

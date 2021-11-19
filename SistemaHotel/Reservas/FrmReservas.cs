@@ -16,5 +16,35 @@ namespace SistemaHotel.Reservas
         {
             InitializeComponent();
         }
+
+        private void FrmReservas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

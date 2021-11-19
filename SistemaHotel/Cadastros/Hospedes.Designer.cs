@@ -34,9 +34,6 @@ namespace SistemaHotel.Cadastros
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.rbCPF = new System.Windows.Forms.RadioButton();
-            this.rbNome = new System.Windows.Forms.RadioButton();
-            this.txtBuscarCPF = new System.Windows.Forms.MaskedTextBox();
             this.grid = new System.Windows.Forms.DataGridView();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,7 +43,8 @@ namespace SistemaHotel.Cadastros
             this.label3 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,6 +89,7 @@ namespace SistemaHotel.Cadastros
             this.btnSalvar.Size = new System.Drawing.Size(70, 65);
             this.btnSalvar.TabIndex = 102;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -104,37 +103,7 @@ namespace SistemaHotel.Cadastros
             this.btnNovo.Size = new System.Drawing.Size(70, 65);
             this.btnNovo.TabIndex = 101;
             this.btnNovo.UseVisualStyleBackColor = true;
-            // 
-            // rbCPF
-            // 
-            this.rbCPF.AutoSize = true;
-            this.rbCPF.Location = new System.Drawing.Point(346, 19);
-            this.rbCPF.Name = "rbCPF";
-            this.rbCPF.Size = new System.Drawing.Size(45, 17);
-            this.rbCPF.TabIndex = 100;
-            this.rbCPF.TabStop = true;
-            this.rbCPF.Text = "CPF";
-            this.rbCPF.UseVisualStyleBackColor = true;
-            // 
-            // rbNome
-            // 
-            this.rbNome.AutoSize = true;
-            this.rbNome.Location = new System.Drawing.Point(279, 19);
-            this.rbNome.Name = "rbNome";
-            this.rbNome.Size = new System.Drawing.Size(53, 17);
-            this.rbNome.TabIndex = 99;
-            this.rbNome.TabStop = true;
-            this.rbNome.Text = "Nome";
-            this.rbNome.UseVisualStyleBackColor = true;
-            // 
-            // txtBuscarCPF
-            // 
-            this.txtBuscarCPF.Location = new System.Drawing.Point(441, 17);
-            this.txtBuscarCPF.Mask = "000,000,000-00";
-            this.txtBuscarCPF.Name = "txtBuscarCPF";
-            this.txtBuscarCPF.Size = new System.Drawing.Size(115, 20);
-            this.txtBuscarCPF.TabIndex = 98;
-            this.txtBuscarCPF.Visible = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // grid
             // 
@@ -153,7 +122,7 @@ namespace SistemaHotel.Cadastros
             // txtTelefone
             // 
             this.txtTelefone.Enabled = false;
-            this.txtTelefone.Location = new System.Drawing.Point(98, 112);
+            this.txtTelefone.Location = new System.Drawing.Point(95, 53);
             this.txtTelefone.Mask = "(99) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(112, 20);
@@ -162,7 +131,7 @@ namespace SistemaHotel.Cadastros
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 119);
+            this.label5.Location = new System.Drawing.Point(40, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 96;
@@ -171,7 +140,7 @@ namespace SistemaHotel.Cadastros
             // txtEndereco
             // 
             this.txtEndereco.Enabled = false;
-            this.txtEndereco.Location = new System.Drawing.Point(305, 116);
+            this.txtEndereco.Location = new System.Drawing.Point(297, 15);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(115, 20);
             this.txtEndereco.TabIndex = 91;
@@ -179,7 +148,7 @@ namespace SistemaHotel.Cadastros
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(250, 119);
+            this.label4.Location = new System.Drawing.Point(235, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 95;
@@ -188,7 +157,7 @@ namespace SistemaHotel.Cadastros
             // txtCPF
             // 
             this.txtCPF.Enabled = false;
-            this.txtCPF.Location = new System.Drawing.Point(305, 71);
+            this.txtCPF.Location = new System.Drawing.Point(297, 53);
             this.txtCPF.Mask = "000,000,000-00";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(112, 20);
@@ -197,7 +166,7 @@ namespace SistemaHotel.Cadastros
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(250, 77);
+            this.label3.Location = new System.Drawing.Point(247, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 13);
             this.label3.TabIndex = 94;
@@ -206,7 +175,7 @@ namespace SistemaHotel.Cadastros
             // txtNome
             // 
             this.txtNome.Enabled = false;
-            this.txtNome.Location = new System.Drawing.Point(98, 71);
+            this.txtNome.Location = new System.Drawing.Point(95, 12);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(115, 20);
             this.txtNome.TabIndex = 89;
@@ -214,20 +183,28 @@ namespace SistemaHotel.Cadastros
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 74);
+            this.label2.Location = new System.Drawing.Point(40, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 93;
             this.label2.Text = "Nome:";
             // 
-            // label1
+            // btnBuscar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(226, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 88;
-            this.label1.Text = "Buscar:";
+            this.btnBuscar.Location = new System.Drawing.Point(334, 132);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 105;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(43, 132);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(285, 20);
+            this.txtBuscar.TabIndex = 106;
             // 
             // FrmHospedes
             // 
@@ -235,13 +212,12 @@ namespace SistemaHotel.Cadastros
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(582, 443);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.rbCPF);
-            this.Controls.Add(this.rbNome);
-            this.Controls.Add(this.txtBuscarCPF);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.label5);
@@ -251,10 +227,10 @@ namespace SistemaHotel.Cadastros
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "FrmHospedes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospedes";
+            this.Load += new System.EventHandler(this.FrmHospedes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -267,9 +243,6 @@ namespace SistemaHotel.Cadastros
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.RadioButton rbCPF;
-        private System.Windows.Forms.RadioButton rbNome;
-        private System.Windows.Forms.MaskedTextBox txtBuscarCPF;
         private System.Windows.Forms.DataGridView grid;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.Label label5;
@@ -279,6 +252,7 @@ namespace SistemaHotel.Cadastros
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
     }
 }
