@@ -46,23 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastros\Cargo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastros\Cargo.Designer.cs">
-      <DependentUpon>Cargo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cadastros\Fornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cadastros\Fornecedores.Designer.cs">
       <DependentUpon>Fornecedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastros\Funcionarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastros\Funcionarios.Designer.cs">
-      <DependentUpon>Funcionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Cadastros\Hospedes.cs">
       <SubType>Form</SubType>
@@ -168,14 +156,8 @@
     <Compile Include="Reservas\FrmReservas.Designer.cs">
       <DependentUpon>FrmReservas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Cadastros\Cargo.resx">
-      <DependentUpon>Cargo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Fornecedores.resx">
       <DependentUpon>Fornecedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastros\Funcionarios.resx">
-      <DependentUpon>Funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastros\Hospedes.resx">
       <DependentUpon>Hospedes.cs</DependentUpon>

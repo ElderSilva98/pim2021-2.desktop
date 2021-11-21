@@ -114,5 +114,10 @@ namespace SistemaHotel.Cadastros
             btnExcluir.Enabled = false;
             
         }
+
+        private void FrmFornecedores_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

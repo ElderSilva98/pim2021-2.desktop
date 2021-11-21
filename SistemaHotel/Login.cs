@@ -13,8 +13,11 @@ namespace SistemaHotel
 {
     public partial class FrmLogin : Form
     {
+        //CONSTANTES
+        public const string SERVERNAME = "DESKTOP-91L4B2A";
+
         //Referencia da conexão
-        SqlConnection Conexao = new SqlConnection(@"Data Source=GERENCIA\SQLEXPRESS;Initial Catalog=hotel;Persist Security Info=True;User ID=pim4;Password=pim4");
+        SqlConnection Conexao = new SqlConnection(@"Data Source="+ SERVERNAME +";Initial Catalog=hotel;Persist Security Info=True;User ID=sa;Password=789456");
         public FrmLogin()
         {
             InitializeComponent();

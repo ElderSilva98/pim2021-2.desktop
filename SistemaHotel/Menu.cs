@@ -12,6 +12,7 @@ namespace SistemaHotel
 {
     public partial class FrmMenu : Form
     {
+
         public FrmMenu()
         {
             InitializeComponent();
@@ -45,12 +46,6 @@ namespace SistemaHotel
         private void FornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Cadastros.FrmFornecedores form = new Cadastros.FrmFornecedores();
-            form.Show();
-        }
-
-        private void CargoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cadastros.FrmCargo form = new Cadastros.FrmCargo();
             form.Show();
         }
 
@@ -98,19 +93,13 @@ namespace SistemaHotel
 
         private void UsuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cadastros.FrmUsuarios form = new Cadastros.FrmUsuarios();
-            form.Show();
+            Cadastros.FrmUsuarios usuarios = new Cadastros.FrmUsuarios();
+            usuarios.Show();
         }
 
         private void ServiçosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Cadastros.FrmServicos form = new Cadastros.FrmServicos();
-            form.Show();
-        }
-
-        private void FuncionáriosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cadastros.FrmFuncionarios form = new Cadastros.FrmFuncionarios();
             form.Show();
         }
 
@@ -152,6 +141,12 @@ namespace SistemaHotel
         private void MenuSair_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void novaReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reservas.FrmReservas form = new Reservas.FrmReservas();
+            form.Show();
         }
     }
 }

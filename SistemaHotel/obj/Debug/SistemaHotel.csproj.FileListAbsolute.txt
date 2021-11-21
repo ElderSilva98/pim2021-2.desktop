@@ -27,3 +27,30 @@ C:\Users\Ronei Silva\OneDrive - UNIP\PIMIV\SistemaHotel\obj\Debug\SistemaHotel.R
 C:\Users\Ronei Silva\OneDrive - UNIP\PIMIV\SistemaHotel\obj\Debug\SistemaHotel.Cadastros.FrmFuncionarios.resources
 C:\Users\Ronei Silva\OneDrive - UNIP\PIMIV\SistemaHotel\obj\Debug\SistemaHotel.Produtos.FrmProdutos.resources
 C:\Users\Ronei Silva\OneDrive - UNIP\PIMIV\SistemaHotel\obj\Debug\SistemaHotel.Reservas.FrmCheckOut.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\bin\Debug\SistemaHotel.exe.config
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\bin\Debug\SistemaHotel.exe
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\bin\Debug\SistemaHotel.pdb
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.csproj.AssemblyReference.cache
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Cadastros.FrmFornecedores.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Cadastros.FrmHospedes.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Cadastros.FrmQuartos.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Cadastros.FrmServicos.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Cadastros.FrmUsuarios.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.FrmLogin.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.FrmMenu.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Movimentacoes.FrmVendas.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Movimentacoes.FrmGastos.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Movimentacoes.FrmMovimentacoes.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Movimentacoes.FrmNovoServics.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Produtos.FrmEstoque.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Produtos.FrmEstoqueBaixo.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Produtos.FrmProdutos.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Properties.Resources.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Reservas.FrmCheckIn.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Reservas.FrmCheckOut.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Reservas.FrmConsultarReservas.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.Reservas.FrmReservas.resources
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.csproj.GenerateResource.cache
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.csproj.CoreCompileInputs.cache
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.exe
+C:\Users\elderpinto\Documents\Elder\pim2021-2.desktop\SistemaHotel\obj\Debug\SistemaHotel.pdb
