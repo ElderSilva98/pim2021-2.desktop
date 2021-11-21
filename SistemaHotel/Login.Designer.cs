@@ -34,10 +34,10 @@ namespace SistemaHotel
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.pnlLogin = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,17 @@ namespace SistemaHotel
             this.pnlLogin.Size = new System.Drawing.Size(332, 340);
             this.pnlLogin.TabIndex = 0;
             this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(11, 322);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(312, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "  Sistema Desenvolvido pela equipe PIM  - Universidade Paulista";
             // 
             // btnLogin
             // 
@@ -91,17 +102,6 @@ namespace SistemaHotel
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(220, 16);
             this.txtUsuario.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(11, 322);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(312, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "  Sistema Desenvolvido pela equipe PIM  - Universidade Paulista";
             // 
             // FrmLogin
             // 
