@@ -287,14 +287,14 @@ namespace SistemaHotel
             // novaReservaToolStripMenuItem
             // 
             this.novaReservaToolStripMenuItem.Name = "novaReservaToolStripMenuItem";
-            this.novaReservaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novaReservaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.novaReservaToolStripMenuItem.Text = "Nova Reserva";
             this.novaReservaToolStripMenuItem.Click += new System.EventHandler(this.novaReservaToolStripMenuItem_Click);
             // 
             // quadroDeReservasToolStripMenuItem
             // 
             this.quadroDeReservasToolStripMenuItem.Name = "quadroDeReservasToolStripMenuItem";
-            this.quadroDeReservasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quadroDeReservasToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.quadroDeReservasToolStripMenuItem.Text = "Consultar Reservas";
             // 
             // MenuChekInOut
@@ -1089,7 +1089,7 @@ namespace SistemaHotel
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMenu";
-            this.Text = "Sistema Hotel PIM IV";
+            this.Text = "Amazon Palace Hotel";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.menuStrip1.ResumeLayout(false);

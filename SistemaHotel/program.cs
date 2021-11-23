@@ -9,6 +9,8 @@ namespace SistemaHotel
 {
     class Program
     {
+        public static string nomeUsuario { get; internal set; }
+
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
