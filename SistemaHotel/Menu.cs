@@ -20,7 +20,8 @@ namespace SistemaHotel
 
         private void FrmMenu_Load(object sender, EventArgs e)
         {
-
+            lblUsuario.Text = Program.nomeUsuario;
+            lblCargo.Text = Program.cargoUsuario;
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -148,5 +149,7 @@ namespace SistemaHotel
             Reservas.FrmReservas form = new Reservas.FrmReservas();
             form.Show();
         }
+
+
     }
 }

@@ -16,6 +16,10 @@ namespace SistemaHotel
         //CONSTANTES
         public const string SERVERNAME = "DESKTOP-91L4B2A";
 
+        SqlDataReader read;
+        SqlCommand cmdVerificar;
+
+
         //Referencia da conexão
         SqlConnection Conexao = new SqlConnection(@"Data Source="+ SERVERNAME +";Initial Catalog=hotel;Persist Security Info=True;User ID=sa;Password=789456");
         public FrmLogin()
@@ -35,12 +39,7 @@ namespace SistemaHotel
 
         }
 
-        private void BtnLogin_Click(object sender, EventArgs e)
-        {
-            ChamarLogin();
-        }
-
-        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -48,6 +47,10 @@ namespace SistemaHotel
             }
         }
 
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            ChamarLogin();
+        }
 
         private void ChamarLogin()
         {
@@ -68,17 +71,21 @@ namespace SistemaHotel
             }
             //AQUI VAI O CÓDIGO PARA O LOGIN
             Conexao.Open(); //Abrir a conexão
-            String query = "SELECT * FROM hotel.usuarios where usuario = '" + txtUsuario.Text + "' AND senha = '" + txtSenha.Text + "'";
-            SqlDataAdapter dp = new SqlDataAdapter(query, Conexao);
-            DataTable dt = new DataTable();
-            dp.Fill(dt);
+            cmdVerificar = new SqlCommand("SELECT * FROM hotel.usuarios where usuario = @usuario and senha = @senha", Conexao);
+            cmdVerificar.Parameters.AddWithValue("@usuario", txtUsuario.Text);
+            cmdVerificar.Parameters.AddWithValue("@senha", txtSenha.Text);
+            read = cmdVerificar.ExecuteReader();
 
-            if (dt.Rows.Count == 1)
+            if (read.HasRows)
             {
 
 
                 {
-
+                    while (read.Read())
+                    {
+                        Program.nomeUsuario = Convert.ToString(read["nome"]);
+                        Program.cargoUsuario = Convert.ToString(read["cargo"]);
+                    }
 
                     MessageBox.Show("Bem Vindo! " + Program.nomeUsuario, "Login Efetuado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FrmMenu form = new FrmMenu();
@@ -110,8 +117,6 @@ namespace SistemaHotel
         {
             pnlLogin.Location = new Point(this.Width / 2 - 166, this.Height / 2 - 170);
         }
-
-
 
     }
 
