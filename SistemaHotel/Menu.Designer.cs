@@ -52,7 +52,6 @@ namespace SistemaHotel
             this.gastosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuReservas = new System.Windows.Forms.ToolStripMenuItem();
             this.novaReservaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quadroDeReservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuChekInOut = new System.Windows.Forms.ToolStripMenuItem();
             this.novoServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -173,35 +172,35 @@ namespace SistemaHotel
             // hóspedesToolStripMenuItem
             // 
             this.hóspedesToolStripMenuItem.Name = "hóspedesToolStripMenuItem";
-            this.hóspedesToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.hóspedesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.hóspedesToolStripMenuItem.Text = "Hóspedes";
             this.hóspedesToolStripMenuItem.Click += new System.EventHandler(this.hóspedesToolStripMenuItem_Click);
             // 
             // quartosToolStripMenuItem
             // 
             this.quartosToolStripMenuItem.Name = "quartosToolStripMenuItem";
-            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.quartosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quartosToolStripMenuItem.Text = "Quartos";
             this.quartosToolStripMenuItem.Click += new System.EventHandler(this.quartosToolStripMenuItem_Click);
             // 
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // serviçosToolStripMenuItem
             // 
             this.serviçosToolStripMenuItem.Name = "serviçosToolStripMenuItem";
-            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.serviçosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.serviçosToolStripMenuItem.Text = "Serviços";
             this.serviçosToolStripMenuItem.Click += new System.EventHandler(this.serviçosToolStripMenuItem_Click);
             // 
             // fornecedoresToolStripMenuItem
             // 
             this.fornecedoresToolStripMenuItem.Name = "fornecedoresToolStripMenuItem";
-            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.fornecedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fornecedoresToolStripMenuItem.Text = "Fornecedores";
             this.fornecedoresToolStripMenuItem.Click += new System.EventHandler(this.fornecedoresToolStripMenuItem_Click);
             // 
@@ -277,8 +276,7 @@ namespace SistemaHotel
             // MenuReservas
             // 
             this.MenuReservas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novaReservaToolStripMenuItem,
-            this.quadroDeReservasToolStripMenuItem});
+            this.novaReservaToolStripMenuItem});
             this.MenuReservas.Image = ((System.Drawing.Image)(resources.GetObject("MenuReservas.Image")));
             this.MenuReservas.Name = "MenuReservas";
             this.MenuReservas.Size = new System.Drawing.Size(80, 20);
@@ -287,15 +285,9 @@ namespace SistemaHotel
             // novaReservaToolStripMenuItem
             // 
             this.novaReservaToolStripMenuItem.Name = "novaReservaToolStripMenuItem";
-            this.novaReservaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.novaReservaToolStripMenuItem.Text = "Nova Reserva";
+            this.novaReservaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novaReservaToolStripMenuItem.Text = "Criar/Consultar";
             this.novaReservaToolStripMenuItem.Click += new System.EventHandler(this.novaReservaToolStripMenuItem_Click);
-            // 
-            // quadroDeReservasToolStripMenuItem
-            // 
-            this.quadroDeReservasToolStripMenuItem.Name = "quadroDeReservasToolStripMenuItem";
-            this.quadroDeReservasToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.quadroDeReservasToolStripMenuItem.Text = "Consultar Reservas";
             // 
             // MenuChekInOut
             // 
@@ -452,7 +444,7 @@ namespace SistemaHotel
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(572, 4);
+            this.button7.Location = new System.Drawing.Point(552, 4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(70, 65);
             this.button7.TabIndex = 6;
@@ -465,7 +457,7 @@ namespace SistemaHotel
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(474, 4);
+            this.button6.Location = new System.Drawing.Point(465, 4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(70, 65);
             this.button6.TabIndex = 5;
@@ -1218,7 +1210,6 @@ namespace SistemaHotel
         private System.Windows.Forms.ToolStripMenuItem gastosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuReservas;
         private System.Windows.Forms.ToolStripMenuItem novaReservaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quadroDeReservasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuChekInOut;
         private System.Windows.Forms.ToolStripMenuItem novoServiçoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem checkOutToolStripMenuItem;

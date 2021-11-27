@@ -76,6 +76,19 @@
     <Compile Include="Cadastros\Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="hotelDataSet.cs">
+      <DependentUpon>hotelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hotelDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hotelDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="hotelDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hotelDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +232,28 @@
     <EmbeddedResource Include="Reservas\FrmReservas.resx">
       <DependentUpon>FrmReservas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="hotelDataSet.xsc">
+      <DependentUpon>hotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hotelDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hotelDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hotelDataSet.xss">
+      <DependentUpon>hotelDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="hotelDataSet1.xsc">
+      <DependentUpon>hotelDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="hotelDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>hotelDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="hotelDataSet1.xss">
+      <DependentUpon>hotelDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

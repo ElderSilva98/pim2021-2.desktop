@@ -16,5 +16,10 @@ namespace SistemaHotel.Reservas
         {
             InitializeComponent();
         }
+
+        private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

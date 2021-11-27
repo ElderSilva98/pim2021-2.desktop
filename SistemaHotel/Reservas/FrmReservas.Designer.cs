@@ -30,77 +30,26 @@ namespace SistemaHotel.Reservas
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReservas));
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.txtValor = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtDias = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.grid = new System.Windows.Forms.DataGridView();
             this.cbQuarto = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.calendario = new System.Windows.Forms.MonthCalendar();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.cbFiltro = new System.Windows.Forms.ComboBox();
+            this.grid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(328, 297);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(13, 13);
-            this.lblTotal.TabIndex = 200;
-            this.lblTotal.Text = "0";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(288, 297);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
-            this.label8.TabIndex = 199;
-            this.label8.Text = "Total:";
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.Color.Transparent;
-            this.btnRemove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemove.BackgroundImage")));
-            this.btnRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemove.FlatAppearance.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Location = new System.Drawing.Point(558, 292);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(23, 23);
-            this.btnRemove.TabIndex = 167;
-            this.btnRemove.UseVisualStyleBackColor = false;
-            // 
-            // txtValor
-            // 
-            this.txtValor.Enabled = false;
-            this.txtValor.Location = new System.Drawing.Point(358, 16);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(62, 20);
-            this.txtValor.TabIndex = 165;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(288, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
-            this.label7.TabIndex = 166;
-            this.label7.Text = "Valor Diária:";
             // 
             // txtDias
             // 
             this.txtDias.Enabled = false;
-            this.txtDias.Location = new System.Drawing.Point(190, 16);
+            this.txtDias.Location = new System.Drawing.Point(197, 15);
             this.txtDias.Name = "txtDias";
             this.txtDias.Size = new System.Drawing.Size(62, 20);
             this.txtDias.TabIndex = 163;
@@ -109,7 +58,7 @@ namespace SistemaHotel.Reservas
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(153, 18);
+            this.label4.Location = new System.Drawing.Point(160, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 13);
             this.label4.TabIndex = 164;
@@ -128,6 +77,7 @@ namespace SistemaHotel.Reservas
             this.btnSalvar.Size = new System.Drawing.Size(70, 65);
             this.btnSalvar.TabIndex = 159;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovo
             // 
@@ -143,27 +93,35 @@ namespace SistemaHotel.Reservas
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
-            // grid
-            // 
-            this.grid.AllowUserToAddRows = false;
-            this.grid.AllowUserToDeleteRows = false;
-            this.grid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid.GridColor = System.Drawing.SystemColors.Control;
-            this.grid.Location = new System.Drawing.Point(291, 123);
-            this.grid.Name = "grid";
-            this.grid.ReadOnly = true;
-            this.grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid.Size = new System.Drawing.Size(290, 162);
-            this.grid.TabIndex = 157;
-            // 
             // cbQuarto
             // 
+            this.cbQuarto.AutoCompleteCustomSource.AddRange(new string[] {
+            "101",
+            "102",
+            "103",
+            "201",
+            "202",
+            "203",
+            "301",
+            "302",
+            "303",
+            "404"});
             this.cbQuarto.Enabled = false;
             this.cbQuarto.FormattingEnabled = true;
+            this.cbQuarto.Items.AddRange(new object[] {
+            "101",
+            "102",
+            "103",
+            "201",
+            "202",
+            "203",
+            "301",
+            "302",
+            "303",
+            "404"});
             this.cbQuarto.Location = new System.Drawing.Point(60, 15);
             this.cbQuarto.Name = "cbQuarto";
-            this.cbQuarto.Size = new System.Drawing.Size(67, 21);
+            this.cbQuarto.Size = new System.Drawing.Size(83, 21);
             this.cbQuarto.TabIndex = 153;
             // 
             // label6
@@ -180,7 +138,7 @@ namespace SistemaHotel.Reservas
             this.txtNome.Enabled = false;
             this.txtNome.Location = new System.Drawing.Point(56, 58);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(237, 20);
+            this.txtNome.Size = new System.Drawing.Size(199, 20);
             this.txtNome.TabIndex = 151;
             // 
             // label2
@@ -192,29 +150,63 @@ namespace SistemaHotel.Reservas
             this.label2.TabIndex = 154;
             this.label2.Text = "Nome:";
             // 
-            // monthCalendar1
+            // calendario
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(28, 123);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 232;
+            this.calendario.Location = new System.Drawing.Point(28, 123);
+            this.calendario.Name = "calendario";
+            this.calendario.TabIndex = 232;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(664, 94);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 234;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(412, 96);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(246, 20);
+            this.txtBuscar.TabIndex = 235;
+            // 
+            // cbFiltro
+            // 
+            this.cbFiltro.FormattingEnabled = true;
+            this.cbFiltro.Items.AddRange(new object[] {
+            "Hospede",
+            "Quarto"});
+            this.cbFiltro.Location = new System.Drawing.Point(305, 96);
+            this.cbFiltro.Name = "cbFiltro";
+            this.cbFiltro.Size = new System.Drawing.Size(101, 21);
+            this.cbFiltro.TabIndex = 236;
+            // 
+            // grid
+            // 
+            this.grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid.Location = new System.Drawing.Point(305, 124);
+            this.grid.Name = "grid";
+            this.grid.Size = new System.Drawing.Size(434, 275);
+            this.grid.TabIndex = 237;
             // 
             // FrmReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(606, 411);
-            this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.txtValor);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(751, 411);
+            this.Controls.Add(this.grid);
+            this.Controls.Add(this.cbFiltro);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.calendario);
             this.Controls.Add(this.txtDias);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.grid);
             this.Controls.Add(this.cbQuarto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNome);
@@ -230,20 +222,18 @@ namespace SistemaHotel.Reservas
         }
 
         #endregion
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.TextBox txtValor;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDias;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.DataGridView grid;
         private System.Windows.Forms.ComboBox cbQuarto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar calendario;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.ComboBox cbFiltro;
+        private System.Windows.Forms.DataGridView grid;
     }
 }
